@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Javascript</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #calc{
+            padding: 10px;
+            margin: 10px;
+            align-items: center;
+            justify-content: center;
+            width: 40%;
+            background-color: #71c1f0;
+            border: solid black 1px;
+            border-radius: 20px;
+        }
+
+        h1{
+            margin: 10px;
+        }
+
+        form{
+            padding: 10px;
+            margin: 10px;
+            width: 400px;
+            height: 350px;
+        }
+        #numero1 , #numero2{
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #botao{
+            padding: 5px;
+            justify-content: center;
+            background-color: #71c1f0c9;
+        }
+        
+        #botao:hover{
+            background-color: #5ba8d4c9;
+        }
+
+    </style>
+    <script type="text/javascript">
+        function soma(){
+            var num1 = parseFloat(document.getElementById('numero1').value);
+            var num2 = parseFloat(document.getElementById('numero2').value);
+            form_calcu.resultado.value= "O resultado da soma é: " + (num1 + num2);
+        }
+
+        function subtração(){
+            var num1 = parseFloat(document.getElementById('numero1').value);
+            var num2 = parseFloat(document.getElementById('numero2').value);
+            form_calcu.resultado.value= "O resultado da subtração é: " + (num1 - num2);
+        }
+
+        function multiplicacao(){
+            var num1 = parseFloat(document.getElementById('numero1').value);
+            var num2 = parseFloat(document.getElementById('numero2').value);
+            form_calcu.resultado.value= "O resultado da multiplicacão é: " + (num1 * num2);
+        }
+
+        function divisao(){
+            var num1 = parseFloat(document.getElementById('numero1').value);
+            var num2 = parseFloat(document.getElementById('numero2').value);
+            form_calcu.resultado.value= "O resultado da divisão é: " + (num1 / num2);
+        }
+
+    </script>
+</head>
+<body>
+    <div id="calc">
+        <h1>Calculadora</h1>
+        <h3>Digite os numeros e escolha a operacão</h3>
+        <form name="form_calcu">
+            Número 1
+            <input name="numero1" id="numero1" text="Número 1" autofocus><br>
+            Número 2
+            <input name="numero2" id="numero2" text="Número 2"><br><br>
+            <input id="botao" type="button" onClick="soma()" value="Soma"/><br><br>
+            <input id="botao" type="button" onClick="subtração()" value="Subtração"/><br><br>
+            <input id="botao" type="button" onClick="multiplicacao()" value="Multiplicação"/><br><br>
+            <input id="botao" type="button" onClick="divisao()" value="Divisão"/><br><br>
+            <output name="resultado" id="resultado"></output>
+        </form>
+    </div>
+</body>
+</html>
